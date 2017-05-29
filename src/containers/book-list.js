@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+
 class BookList extends Component {
     renderList(){
         return this.props.books.map((book)=>{
@@ -19,6 +20,9 @@ class BookList extends Component {
 }
 
 function mapStateToProps(state) {
+    // Whatever is returned will show up as props
+    // inside of BookList
+    
     return {
         books: state.books
     };
